@@ -1,19 +1,28 @@
 type Image {
-  # Example field (placeholder)
-  exampleField: Int
+  id: Int!
+  title: String!
+  date: String!
+  author: String!
+  description: String!
+  file: String!
+  likes: Int!
 }
 
 input CreateImageInput {
-  # Example field (placeholder)
-  exampleField: Int
+  title: String!
+  date: String!
+  author: String!
+  description: String!
+  file: String!
 }
 
 input UpdateImageInput {
   id: Int!
+  likes: Int!
 }
 
 type Query {
-  image: [Image]!
+  images: [Image]!
   image(id: Int!): Image
 }
 
