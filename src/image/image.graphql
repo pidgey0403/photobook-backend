@@ -1,0 +1,24 @@
+type Image {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateImageInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateImageInput {
+  id: Int!
+}
+
+type Query {
+  image: [Image]!
+  image(id: Int!): Image
+}
+
+type Mutation {
+  createImage(createImageInput: CreateImageInput!): Image!
+  updateImage(updateImageInput: UpdateImageInput!): Image!
+  removeImage(id: Int!): Image
+}

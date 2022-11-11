@@ -6,6 +6,7 @@ import { AppController } from './app.controller';
 import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
 import { AppService } from './app.service';
 import { PrismaModule } from './prisma/prisma.module';
+import { ImageModule } from './image/image.module';
 
 @Module({
   imports: [
@@ -20,7 +21,8 @@ import { PrismaModule } from './prisma/prisma.module';
         outputAs: 'class',
       },
     }),
-    PrismaModule, //link PrismaModule to access our PrismaService
+    PrismaModule,
+    ImageModule, //link PrismaModule to access our PrismaService
   ],
   controllers: [AppController],
   providers: [AppService],
