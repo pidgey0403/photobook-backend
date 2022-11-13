@@ -29,6 +29,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2.2.4
+        with:
+        version: 7
       - run: pnpm install
       - run: pnpm test
 
@@ -46,6 +48,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2.2.4
+        with:
+        version: 7
       - run: pnpm install
       - run: pnpm lint
       - run: pnpm test:format
@@ -60,6 +64,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2.2.4
         with:
-          node-version: ${{ matrix.node }}
+        version: 7
       - run: pnpm install
       - run: pnpm build
