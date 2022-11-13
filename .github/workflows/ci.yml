@@ -44,16 +44,15 @@ on:
   #     - run: diff graphq.ignore.ts src/types/graphql.ts
 
   jobs:
-    lint:
+    build:
       runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v3
-        - uses: pnpm/action-setup@v2.2.4
-          with:
-            version: 7
-        - run: pnpm install
-        - run: pnpm lint
-        - run: pnpm test:format
+    steps:
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 7
+      - run: pnpm install
+      - run: pnpm lint
+      - run: pnpm test:format
 
   # build:
   #   runs-on: ubuntu-latest
