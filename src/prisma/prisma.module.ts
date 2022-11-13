@@ -1,11 +1,11 @@
-// Create and export Prisma service so other services can access it
+// Global prisma module that is exported and provides prisma to other services
+
 import { Global, Module } from '@nestjs/common';
 import { PrismaService } from './prisma.service';
 
 @Global()
 @Module({
-  imports: [],
-  controllers: [PrismaService],
+  exports: [PrismaService],
   providers: [PrismaService],
 })
 export class PrismaModule {}

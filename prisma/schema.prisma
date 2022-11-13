@@ -14,7 +14,7 @@ datasource db {
 model Image {
   id Int @id @default(autoincrement())
   title String
-  date DateTime @default(now())
+  date String
   author String
   description String
   file String

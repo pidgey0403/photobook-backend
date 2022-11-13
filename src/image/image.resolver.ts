@@ -1,7 +1,6 @@
 import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
+import { CreateImageInput, UpdateImageInput } from 'src/types/graphql';
 import { ImageService } from './image.service';
-import { CreateImageInput } from './dto/create-image.input';
-import { UpdateImageInput } from './dto/update-image.input';
 
 @Resolver('Image')
 export class ImageResolver {
@@ -12,7 +11,7 @@ export class ImageResolver {
     return this.imageService.create(createImageInput);
   }
 
-  @Query('image')
+  @Query('images')
   findAll() {
     return this.imageService.findAll();
   }

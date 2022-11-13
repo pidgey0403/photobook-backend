@@ -1,26 +1,52 @@
 import { Injectable } from '@nestjs/common';
-import { CreateImageInput } from './dto/create-image.input';
-import { UpdateImageInput } from './dto/update-image.input';
+import { PrismaService } from 'src/prisma/prisma.service';
+import { CreateImageInput, UpdateImageInput } from 'src/types/graphql';
 
 @Injectable()
 export class ImageService {
-  create(createImageInput: CreateImageInput) {
-    return 'This action adds a new image';
+  constructor(private prisma: PrismaService) {}
+
+  // Create 1 Image: pass in title, date, author, description, file
+  // ID and likes will be auto-generated
+  create({ title, date, author, description, file }: CreateImageInput) {
+    return this.prisma.image.create({
+      data: { title, date, author, description, file },
+    });
   }
 
+  // Return array of all Images
   findAll() {
-    return `This action returns all image`;
+    return this.prisma.image.findMany();
   }
 
+  // Return 1 Image
   findOne(id: number) {
-    return `This action returns a #${id} image`;
+    return this.prisma.image.findUnique({
+      where: { id },
+      //allows us to filter out potentially sensitive fields
+      select: {
+        title: true,
+        date: true,
+        author: true,
+        description: true,
+        file: true,
+      },
+    });
   }
 
-  update(id: number, updateImageInput: UpdateImageInput) {
-    return `This action updates a #${id} image`;
+  // Update 1 Image: need the image ID and likes attribute will be modified
+  update(id: number, { likes }: UpdateImageInput) {
+    return this.prisma.image.update({
+      where: { id },
+      data: {
+        likes,
+      },
+    });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} image`;
+    return this.prisma.image.delete({
+      where: { id },
+    });
   }
 }
