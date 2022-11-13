@@ -1,5 +1,8 @@
+# Image GraphQL schema - defines types and inputs , and all possible queries and mutations
+
+# Type describing an image entity
 type Image {
-  id: Int
+  id: Int # in some queries the ID does not need to be returned
   title: String!
   date: String!
   author: String!
@@ -8,6 +11,7 @@ type Image {
   likes: Int!
 }
 
+# Input object for creating an image entity
 input CreateImageInput {
   title: String!
   date: String!
@@ -16,16 +20,19 @@ input CreateImageInput {
   file: String!
 }
 
+# Input object for updating an image entity
 input UpdateImageInput {
   id: Int!
   likes: Int!
 }
 
+# Defining possible queries and their types
 type Query {
   images: [Image]!
   image(id: Int!): Image
 }
 
+# Defining possible mutations and their types
 type Mutation {
   createImage(createImageInput: CreateImageInput!): Image!
   updateImage(updateImageInput: UpdateImageInput!): Image!

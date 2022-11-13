@@ -1,3 +1,5 @@
+// Service for Image - using the types generated from GraphQL schema, write queries/mutations to the database using prisma
+
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { CreateImageInput, UpdateImageInput } from 'src/types/graphql';

@@ -1,3 +1,5 @@
+// Spec testing for the Image Service
+
 import { Test, TestingModule } from '@nestjs/testing';
 import { ImageService } from './image.service';
 

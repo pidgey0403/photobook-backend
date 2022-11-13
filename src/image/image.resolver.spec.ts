@@ -1,3 +1,5 @@
+// Spec testing for the Image Resolver
+
 import { Test, TestingModule } from '@nestjs/testing';
 import { ImageResolver } from './image.resolver';
 import { ImageService } from './image.service';
