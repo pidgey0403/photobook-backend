@@ -11,10 +11,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+
+// Create schema for Image entity
 model Image {
   id Int @id @default(autoincrement())
   title String
-  date DateTime @default(now())
+  date String
   author String
   description String
   file String
