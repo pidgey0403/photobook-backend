@@ -1,6 +1,7 @@
 // Spec testing for the Image Service
 
 import { Test, TestingModule } from '@nestjs/testing';
+import { PrismaService } from '../prisma/prisma.service';
 import { ImageService } from './image.service';
 
 describe('ImageService', () => {
@@ -8,7 +9,13 @@ describe('ImageService', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [ImageService],
+      providers: [
+        ImageService,
+        {
+          provide: PrismaService,
+          useValue: {},
+        },
+      ],
     }).compile();
 
     service = module.get<ImageService>(ImageService);

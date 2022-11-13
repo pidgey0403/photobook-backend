@@ -2,7 +2,7 @@
 // Responsible for routing handling for the GraphQL API
 
 import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
-import { CreateImageInput, UpdateImageInput } from 'src/types/graphql';
+import { CreateImageInput, UpdateImageInput } from '../types/graphql';
 import { ImageService } from './image.service';
 
 @Resolver('Image')
