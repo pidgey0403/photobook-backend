@@ -23,6 +23,7 @@
     "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "dependencies": {
+    "@nestjs/cli": "^9.1.5",
     "@nestjs/apollo": "^10.1.6",
     "@nestjs/common": "^9.2.0",
     "@nestjs/core": "^9.2.0",
