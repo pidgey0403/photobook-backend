@@ -26,52 +26,30 @@ jobs:
       - run: pnpm install
       - run: pnpm lint
       - run: pnpm test:format
+      - run: pnpm test
+      - run: pnpm test:e2e
+      - run: pnpm build
 
-  # Define the jobs to run on each trigger
-  # jobs:
-  #   test:
-  #     runs-on: ubuntu-latest
-  #     services:
-  #       postgres:
-  #         image: postgres:14
-  #         env:
-  #           POSTGRES_USER: root
-  #           POSTGRES_PASSWORD: password
-  #           POSTGRES_DB: test
-  #           POSTGRES_PORT: 5432
-  #         ports:
-  #           - 5432:5432
-  #     env:
-  #       DATABASE_URL: postgresql://root:password@postgres:5432/test?schema=public&sslmode=prefer
-  #       JWT_SECRET: secret
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:14
+        env:
+          POSTGRES_USER: root
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: test
+          POSTGRES_PORT: 5432
+        ports:
+          - 5432:5432
+    env:
+      DATABASE_URL: postgresql://root:password@postgres:5432/test?schema=public&sslmode=prefer
+      JWT_SECRET: secret
 
-  #     steps:
-  #       - uses: actions/checkout@v3
-  #       - uses: pnpm/action-setup@v2.2.4
-  #         with:
-  #         version: 7
-  #       - run: pnpm install
-  #       - run: pnpm test
-
-  # check-graphql-ts:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: actions/setup-node@v2
-  #     - run: pnpm
-  #     - run: pnpm generate-types --test
-  #     - run: diff graphq.ignore.ts src/types/graphql.ts
-
-  # build:
-  #   runs-on: ubuntu-latest
-  #   strategy:
-  #     matrix:
-  #       node: ['14', '16']
-  #   name: Node ${{ matrix.node }} Build
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: pnpm/action-setup@v2.2.4
-  #       with:
-  #       version: 7
-  #     - run: pnpm install
-  #     - run: pnpm build
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 7
+      - run: pnpm install
+      - run: pnpm test
