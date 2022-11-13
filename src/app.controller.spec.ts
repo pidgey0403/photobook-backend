@@ -1,3 +1,5 @@
+// Spec testing for the App service
+
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';

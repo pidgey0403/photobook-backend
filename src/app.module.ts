@@ -1,3 +1,5 @@
+// Module for App - contains all necessary imports, and lists controllers and providers
+
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
@@ -21,10 +23,10 @@ import { ImageModule } from './image/image.module';
         outputAs: 'class',
       },
     }),
-    PrismaModule,
-    ImageModule, //link PrismaModule to access our PrismaService
+    PrismaModule, // import PrismaModule to access PrismaService
+    ImageModule, // import ImageModule to access ImageService
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController], // App controller to handle routing
+  providers: [AppService], // App service to handle functional logic
 })
 export class AppModule {}

@@ -1,3 +1,5 @@
+// Services for App - functions/methods to be injected
+
 import { Injectable } from '@nestjs/common';
 
 @Injectable()

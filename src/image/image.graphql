@@ -1,5 +1,5 @@
 type Image {
-  id: Int 
+  id: Int
   title: String!
   date: String!
   author: String!

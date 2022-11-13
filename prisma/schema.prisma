@@ -11,6 +11,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+
+// Create schema for Image entity
 model Image {
   id Int @id @default(autoincrement())
   title String
