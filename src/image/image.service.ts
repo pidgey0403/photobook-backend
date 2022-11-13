@@ -30,6 +30,7 @@ export class ImageService {
         author: true,
         description: true,
         file: true,
+        likes: true,
       },
     });
   }

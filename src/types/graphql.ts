@@ -22,7 +22,7 @@ export class UpdateImageInput {
 }
 
 export class Image {
-    id: number;
+    id?: Nullable<number>;
     title: string;
     date: string;
     author: string;
