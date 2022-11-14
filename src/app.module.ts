@@ -23,7 +23,7 @@ import { ImageModule } from './image/image.module';
         outputAs: 'class',
       },
       cors: {
-        origin: 'http://localhost:3000',
+        origin: '*',
         credentials: true,
       },
     }),
