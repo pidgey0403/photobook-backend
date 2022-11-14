@@ -22,6 +22,10 @@ import { ImageModule } from './image/image.module';
         path: join(process.cwd(), 'src/types/graphql.ts'),
         outputAs: 'class',
       },
+      cors: {
+        origin: 'http://localhost:3000',
+        credentials: true,
+      },
     }),
     PrismaModule, // import PrismaModule to access PrismaService
     ImageModule, // import ImageModule to access ImageService
