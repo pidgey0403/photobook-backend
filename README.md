@@ -7,14 +7,14 @@ Photobook's GraphQL API, built with Nest.js, Prisma, and PostgreSQL.
 ![](https://github.com/pidgey0403/photobook-backend/actions/workflows/ci.yml/badge.svg)
 ![](https://github.com/pidgey0403/photobook-frontend/actions/workflows/CI.yml/badge.svg)
 
-## Running the App
+## Running the App Locally
 Run the command:
 
 ```bash
 $ docker-compose up
 
 ```
-This should run the App inside a Docker container and expose port 3001. Visit `/graphql` to begin querying.
+This should run the App inside a Docker container and expose port 3001. Visit `/graphql` to begin making local queries and mutations.
 
 ## Code Style
 <a href="https://prettier.io/"><img src="https://img.shields.io/badge/formatter-prettier-blue.svg"></a>
