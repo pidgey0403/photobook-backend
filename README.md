@@ -2,6 +2,8 @@
 
 Photobook's GraphQL API, built with Nest.js, Prisma, and PostgreSQL.
 
+Note: Click [here](https://photobook-fe.herokuapp.com/) to check out the full-stack application. If you want to just explore the GraphQL backend service, visit [here](https://photobook-be.herokuapp.com/)!
+
 ## Build Status
 
 ![](https://github.com/pidgey0403/photobook-backend/actions/workflows/ci.yml/badge.svg)
