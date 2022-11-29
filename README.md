@@ -19,7 +19,7 @@ $ docker-compose up
 $ pnpm start:dev
 
 ```
-This should run the App inside a Docker container and expose port 3001. Visit `/graphql` to begin making local queries and mutations.
+This should run the App inside a Docker container and expose port 3001. Visit `http://localhost:3001/graphql` to begin making local queries and mutations.
 
 ## Code Style
 <a href="https://prettier.io/"><img src="https://img.shields.io/badge/formatter-prettier-blue.svg"></a>
