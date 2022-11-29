@@ -4,7 +4,7 @@ Photobook's GraphQL API, built with Nest.js, Prisma, and PostgreSQL.
 
 Note: Click [here](https://photobook.herokuapp.com/) to check out the full-stack application (please note it might take a minute or two to load up). If you want to just explore the GraphQL backend service, visit [here](https://photobook-be.herokuapp.com/)!
 
-**For the MLH Fellowship Admissions team:** please visit [here](https://github.com/pidgey0403/photobook-frontend) to also view the frontend repository I've built!
+**For the MLH Fellowship Admissions team:** please visit [here](https://github.com/pidgey0403/photobook-frontend) to also view the Photobook-frontend repository!
 
 ## Build Status
 
