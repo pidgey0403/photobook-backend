@@ -2,19 +2,24 @@
 
 Photobook's GraphQL API, built with Nest.js, Prisma, and PostgreSQL.
 
+Note: Click [here](https://photobook.herokuapp.com/) to check out the full-stack application (please note it might take a minute or two to load up). If you want to just explore the GraphQL backend service, visit [here](https://photobook-be.herokuapp.com/)!
+
+**For the MLH Fellowship Admissions team:** please visit [here](https://github.com/pidgey0403/photobook-frontend) to also view the Photobook-frontend repository!
+
 ## Build Status
 
 ![](https://github.com/pidgey0403/photobook-backend/actions/workflows/ci.yml/badge.svg)
 ![](https://github.com/pidgey0403/photobook-frontend/actions/workflows/CI.yml/badge.svg)
 
-## Running the App
+## Running the App Locally
 Run the command:
 
 ```bash
 $ docker-compose up
+$ pnpm start:dev
 
 ```
-This should run the App inside a Docker container and expose port 3001. Visit `/graphql` to begin querying.
+This should run the App inside a Docker container and expose port 3001. Visit `http://localhost:3001/graphql` to begin making local queries and mutations.
 
 ## Code Style
 <a href="https://prettier.io/"><img src="https://img.shields.io/badge/formatter-prettier-blue.svg"></a>
