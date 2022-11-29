@@ -11,12 +11,13 @@ async function bootstrap() {
   // Allow for larger JSON request input sizes
   app.use(bodyParser.json({ limit: '50mb' }));
   app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
+  // enable CORS ORIGIN in the Nest.js application
   app.enableCors({
     origin: true,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true,
   });
   const host = '0.0.0.0';
-  await app.listen(process.env.PORT || 3001, host);
+  await app.listen(process.env.PORT || 3001, host); // set the port to Heroku or local host
 }
 bootstrap();

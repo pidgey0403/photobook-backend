@@ -12,6 +12,7 @@ import { ImageModule } from './image/image.module';
 
 @Module({
   imports: [
+    // Allows connection to configure apollo-client settings
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       playground: false,
@@ -23,6 +24,7 @@ import { ImageModule } from './image/image.module';
         outputAs: 'class',
       },
       cors: {
+        // enable CORS ORIGINS access from any domain
         origin: true,
         credentials: true,
       },

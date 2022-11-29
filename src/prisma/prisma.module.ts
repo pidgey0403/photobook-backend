@@ -5,7 +5,7 @@ import { PrismaService } from './prisma.service';
 
 @Global()
 @Module({
-  exports: [PrismaService],
-  providers: [PrismaService],
+  exports: [PrismaService], // make PrismaService available to other modules
+  providers: [PrismaService], // Instantiate this module by the Nest.js injector
 })
 export class PrismaModule {}

@@ -5,6 +5,6 @@ import { ImageService } from './image.service';
 import { ImageResolver } from './image.resolver';
 
 @Module({
-  providers: [ImageResolver, ImageService],
+  providers: [ImageResolver, ImageService], // modules to be instantiated
 })
 export class ImageModule {}

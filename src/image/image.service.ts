@@ -47,6 +47,7 @@ export class ImageService {
     });
   }
 
+  // Delete 1 image given an image ID
   remove(id: number) {
     return this.prisma.image.delete({
       where: { id },
