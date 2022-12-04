@@ -117,7 +117,7 @@ To highlight some differences:
         `app.controller.ts` → Controllers are responsible for handling incoming requests and returning responses to the client. It does not use explicit HTTP URLs like Express.js does, but rather uses function names and decorators to accomplish the task.
         
 
-After comparing the benefits and drawbacks of these two popular Node.js frameworks, I decided to use Express.js as I preferred its **Isolation of Concerns (IoC)** via its MVC architecture. I also appreciated how simple it was to use controllers to handle routing, and enjoyed not having to write explicit HTTP URLs to make get and post requests.
+After comparing the benefits and drawbacks of these two popular Node.js frameworks, I decided to use Nest.js as I preferred its **Isolation of Concerns (IoC)** via its MVC architecture. I also appreciated how simple it was to use controllers to handle routing, and enjoyed not having to write explicit HTTP URLs to make get and post requests.
 
 ### Sources:
 
